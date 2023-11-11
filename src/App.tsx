@@ -1,9 +1,11 @@
+import CardProducts from "./components/cardProdutos";
 import Header from "./components/header";
 
 export default function App() {
   return (
     <>
       <Header />
+
       <div className="absolute">
         <img
           className="w-full h-full object-cover"
@@ -48,6 +50,21 @@ export default function App() {
           <span>Role para ver mais</span>
         </div>
       </div>
+      <section>
+        <div className="relative flex justify-center">
+          <img src="./src/assets/fundo_card.jpg" />
+
+          <div className="absolute top-32">
+            <CardProducts />
+            <CardProducts />
+            <CardProducts />
+            <CardProducts />
+            <CardProducts />
+            <CardProducts />
+            <CardProducts />
+          </div>
+        </div>
+      </section>
     </>
   );
 }
