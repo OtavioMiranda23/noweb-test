@@ -1,3 +1,4 @@
+import CardCategoria, { ICardCategory } from "./components/cardCategoria";
 import CardProducts, { ICardProducts } from "./components/cardProdutos";
 import Header from "./components/header";
 
@@ -70,6 +71,40 @@ export default function App() {
       tag: "Acessórios",
     },
   ];
+  const dataCardCategory = [
+    {
+      title: "LÂMPADAS",
+      picture: "./src/assets/category/catlampada.png",
+    },
+    {
+      title: "LUSTRES",
+      picture: "./src/assets/category/lustres.png",
+    },
+    {
+      title: "LUMINÁRIAS",
+      picture: "./src/assets/category/luminarias.png",
+    },
+    {
+      title: "DECORAÇÕES",
+      picture: "./src/assets/category/decoracoes.png",
+    },
+    {
+      title: "ACESSÓRIOS",
+      picture: "./src/assets/category/chuveiros.png",
+    },
+    {
+      title: "FERRAMENTAS",
+      picture: "./src/assets/category/ferramentas.png",
+    },
+    {
+      title: "UTENSÍLIOS DOMÉSTICOS",
+      picture: "./src/assets/category/utensilios.png",
+    },
+    {
+      title: "UTENSÍLIOS DOMÉSTICOS",
+      picture: "./src/assets/category/cabos.png",
+    },
+  ];
   return (
     <>
       <Header />
@@ -118,14 +153,15 @@ export default function App() {
         src="./src/assets/principal.png"
         alt=""
       />
-      <section>
-        <div className="relative flex justify-center">
+      <section className="md:mx-[121px]">
+        <div className="flex justify-center w-full">
           <img src="./src/assets/fundo_card.jpg" />
-
-          <div className="absolute top-12 flex flex-col gap-3">
-            <span className="text-3xl font-semibold max-w-[263px] break-words text-center text-white">
-              PRODUTOS EM DESTAQUE
-            </span>
+        </div>
+        <div className="-mt-64  flex flex-col justify-center ">
+          <span className="text-xl md:text-3xl font-semibold max-w-[263px] break-words text-center mx-auto flex pb-4 text-white">
+            PRODUTOS EM DESTAQUE
+          </span>
+          <div className="flex flex-wrap gap-8 justify-center">
             {dataCardProducts.map((product: ICardProducts, i: number) => (
               <CardProducts
                 key={i}
@@ -138,6 +174,50 @@ export default function App() {
                 tag={product.tag}
               />
             ))}
+          </div>
+        </div>
+      </section>
+      <section className="min-h-[912px] ">
+        <div className="relative h-[456px] bg-[#202332]">
+          <div className="absolute top-2 left-1/3">
+            <img src="./src/assets/bolinhaMeio.png" alt="" />
+          </div>
+          <span className="text-3xl text-white font-bold flex justify-center py-14">
+            CATEGORIAS
+          </span>
+        </div>
+        <div className="h-1/2 -mt-80 z-20 relative flex flex-wrap justify-center items-center md:mx-[121px]">
+          {dataCardCategory.map((cat: ICardCategory, i: number) => (
+            <div className="m-32">
+              <CardCategoria key={i} title={cat.title} picture={cat.picture} />
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="flex-col bg-[#F7F7F7] py-32">
+        <div className="flex justify-center pb-8">
+          <span className="text-4xl text-[#202332] font-bold">
+            SUA MELHOR OPÇÃO
+          </span>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-6">
+          <div className="lg:w-1/2">
+            <img src="./src/assets/suaMelhor.png" alt="Foto da loja" />
+          </div>
+          <div className="lg:w-1/2 flex flex-col justify-center lg:justify-between gap-4">
+            <p className="mx-12 text-justify lg:mx-2 text-lg leading-9 tracking-wider	">
+              Desde 1970 somos especializados em materiais elétricos, sendo uma
+              das principais distribuidoras do setor. Oferecemos os melhores
+              produtos, com o preço que cabe no seu bolso e atende todas as
+              necessidades do seu dia a dia. Aqui você irá encontrar lustres,
+              luminárias, utilidades domésticas, ferramentas, acessórios,
+              lâmpadas, fios e cabos, quadros de distribuição, caixas de entrada
+              padrão Eletropaulo, materiais elétricos em geral, equipamentos de
+              segurança e comunicação.
+            </p>
+            <button className="m-auto lg:m-0 w-full md:w-80 h-12 md:h-14 bg-[#202332] text-white rounded-2xl uppercase">
+              Saiba mais sobre nós
+            </button>
           </div>
         </div>
       </section>
