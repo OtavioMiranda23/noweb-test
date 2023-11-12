@@ -116,7 +116,7 @@ export default function App() {
           <div className="text-xl tracking-tighter font-medium mb-6 md:font-bold md:text-[3.375rem] xl:text-[4.375rem] md:leading-none ">
             <h1>ILUMINE O SEU DIA A DIA!</h1>
           </div>
-          <div className="hidden xl:block tracking-tight leading-loose my-2 2xl:my-12" >
+          <div className="hidden xl:block tracking-tight leading-loose my-2 2xl:my-12">
             <span>
               Aqui na Elétrica J. Santos queremos trazer mais luz para o seu dia
               a dia! Temos produtos para toda sua casa com a melhor qualidade e
@@ -131,8 +131,8 @@ export default function App() {
               NOS CONHEÇA MELHOR
             </button>
           </div>
-            <ScrollLink to="products" smooth={true} duration={500}>
-          <div className="flex w-full gap-2 pt-4 cursor-pointer ">
+          <ScrollLink to="products" smooth={true} duration={500}>
+            <div className="flex w-full gap-2 pt-4 cursor-pointer ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -148,8 +148,8 @@ export default function App() {
                 />
               </svg>
               <span>Role para ver mais</span>
-          </div>
-            </ScrollLink>
+            </div>
+          </ScrollLink>
         </div>
       </div>
       <img

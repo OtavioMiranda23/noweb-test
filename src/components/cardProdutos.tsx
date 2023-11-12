@@ -25,7 +25,7 @@ export default function CardProducts(props: ICardProducts) {
           </strong>
         </div>
         <div className="flex justify-between text-xl">
-          <span className="w-1/2 py-2 px-2 ">{props.oldPrice}</span>
+          <span className="w-1/2 py-2 px-2 line-through">{props.oldPrice}</span>
           <span className="bg-[#FBAF17] w-1/2 flex justify-center rounded-bl-2xl rounded-tl-2xl items-center py-2 px-2 ">
             {props.price}
           </span>
