@@ -1,5 +1,6 @@
 import CardCategoria, { ICardCategory } from "./components/cardCategoria";
 import CardProducts, { ICardProducts } from "./components/cardProdutos";
+import Footer from "./components/footer";
 import Header from "./components/header";
 
 export default function App() {
@@ -153,7 +154,7 @@ export default function App() {
         src="./src/assets/principal.png"
         alt=""
       />
-      <section className="md:mx-[121px]">
+      <section className="md:mx-[121px] 2xl:mx-[240px]">
         <div className="flex justify-center w-full">
           <img src="./src/assets/fundo_card.jpg" />
         </div>
@@ -161,7 +162,7 @@ export default function App() {
           <span className="text-xl md:text-3xl font-semibold max-w-[263px] break-words text-center mx-auto flex pb-4 text-white">
             PRODUTOS EM DESTAQUE
           </span>
-          <div className="flex flex-wrap gap-8 justify-center">
+          <div className="flex flex-wrap gap-8 justify-center ">
             {dataCardProducts.map((product: ICardProducts, i: number) => (
               <CardProducts
                 key={i}
@@ -186,21 +187,21 @@ export default function App() {
             CATEGORIAS
           </span>
         </div>
-        <div className="h-1/2 -mt-80 z-20 relative flex flex-wrap justify-center items-center md:mx-[121px]">
+        <div className="h-1/2 -mt-80 z-20 relative flex flex-wrap justify-center items-center md:mx-[121px] 2xl:mx-[240px]">
           {dataCardCategory.map((cat: ICardCategory, i: number) => (
-            <div className="m-32">
+            <div className="m-28">
               <CardCategoria key={i} title={cat.title} picture={cat.picture} />
             </div>
           ))}
         </div>
       </section>
-      <section className="flex-col bg-[#F7F7F7] py-32">
+      <section className="flex-col bg-[#F7F7F7] py-32 ">
         <div className="flex justify-center pb-8">
           <span className="text-4xl text-[#202332] font-bold">
             SUA MELHOR OPÇÃO
           </span>
         </div>
-        <div className="flex flex-col lg:flex-row gap-6">
+        <div className="flex flex-col lg:flex-row ">
           <div className="lg:w-1/2">
             <img src="./src/assets/suaMelhor.png" alt="Foto da loja" />
           </div>
@@ -221,6 +222,18 @@ export default function App() {
           </div>
         </div>
       </section>
+      <section>
+        <div className="relative">
+          <img
+            src="./src/assets/ultimoBanner.png"
+            alt="Imagem mulher com celular"
+          />
+          <button className=" absolute font-bold text-lg top-1/2 left-2/4 m-auto lg:m-0 max-w-32 md:w-80 h-12 md:h-14 bg-[#FBAF17] text-[#202332] rounded-2xl uppercase">
+            ACIONE NOSSO TELEVENDAS
+          </button>
+        </div>
+      </section>
+      <Footer />
     </>
   );
 }
