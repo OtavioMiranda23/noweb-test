@@ -1,20 +1,21 @@
 export interface ICardProducts {
-    title: string,
-    picture: string,
-    oldPrice?: string,
-    price: string,
-    installmentAmount?: string,
-    installmentValue?: string,
-    tag: string,
-  }
+  title: string;
+  picture: string;
+  oldPrice?: string;
+  price: string;
+  installmentAmount?: string;
+  installmentValue?: string;
+  tag: string;
+}
 
 export default function CardProducts(props: ICardProducts) {
-    
   return (
     <div className="flex flex-col shadow-xl text-opacity-15 max-w-[263px] rounded-xl">
       <div className="relative">
         <img src={props.picture} alt={props.title} />
-        <div className="absolute bg-slate-200 top-4 rounded-r-lg px-4 font-medium text-base">{props.tag}</div>
+        <div className="absolute bg-slate-200 top-4 rounded-r-lg px-4 font-medium text-base">
+          {props.tag}
+        </div>
       </div>
       <div className="bg-[#202332] mx-4 rounded-xl mt-[-12px] z-10">aaaa</div>
       <div className="bg-white  ">
