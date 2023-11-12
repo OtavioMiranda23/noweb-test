@@ -124,10 +124,10 @@ export default function App() {
             </span>
           </div>
           <div className="flex flex-col gap-2 max-w-[550px] md:max-w-[359px]">
-            <button className="bg-[#FBAF17] rounded-2xl py-2 text-sm md:text-base font-medium text-[#202332] px-4 lg:py-4">
+            <button className=" btn hover:brightness-110 bg-[#FBAF17] rounded-2xl py-2 text-sm md:text-base font-medium text-[#202332] px-4 lg:py-4">
               VEJA NOSSOS PRODUTOS
             </button>
-            <button className="bg-transparent border-[1px] py-2 border-white rounded-2xl text-sm md:text-base font-medium text-white lg:px-4 lg:py-4">
+            <button className=" btn hover:brightness-110 bg-transparent border-[1px] py-2 border-white rounded-2xl text-sm md:text-base font-medium text-white lg:px-4 lg:py-4">
               NOS CONHEÇA MELHOR
             </button>
           </div>
@@ -226,7 +226,7 @@ export default function App() {
               padrão Eletropaulo, materiais elétricos em geral, equipamentos de
               segurança e comunicação.
             </p>
-            <button className="m-auto lg:m-0 w-full md:w-80 h-12 md:h-14 bg-[#202332] text-white rounded-2xl uppercase">
+            <button className="btn hover:brightness-110 m-auto lg:m-0 w-full md:w-80 h-12 md:h-14 bg-[#202332] text-white rounded-2xl uppercase">
               Saiba mais sobre nós
             </button>
           </div>
@@ -238,7 +238,7 @@ export default function App() {
             src="./src/assets/ultimoBanner.png"
             alt="Imagem mulher com celular"
           />
-          <button className=" absolute font-bold text-lg top-1/2 left-2/4 m-auto lg:m-0 max-w-32 md:w-80 h-12 md:h-14 bg-[#FBAF17] text-[#202332] rounded-2xl uppercase">
+          <button className="btn hover:brightness-110 absolute font-bold text-lg top-1/2 left-2/4 m-auto lg:m-0 max-w-32 md:w-80 h-12 md:h-14 bg-[#FBAF17] text-[#202332] rounded-2xl uppercase">
             ACIONE NOSSO TELEVENDAS
           </button>
         </div>

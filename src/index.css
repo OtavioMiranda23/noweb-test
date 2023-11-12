@@ -1,7 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.btn {
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+.btn-brightness:hover {
+    @apply filter brightness-110;
+}
 .dropdown-content {
     display: flex;
     flex-direction: column;
